@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby  #shabang line tells terminal to intreprete the language 
+
+require_relative '../lib/got_cli.rb' 
+
+#Cli.new.run
