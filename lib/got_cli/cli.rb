@@ -12,7 +12,7 @@ class Cli
     def validation
       print_continue
       input=gets.strip.downcase      #users input information and make it downcase
-    if input == "yes" || input "y"
+    if input == "yes" || input == "y"
       print_all                       # work of this still 
       print_selection_prompt
       user_input 
@@ -20,12 +20,14 @@ class Cli
     else
       print_goodbye
       'Thank you for checking out Game of Thrones Houses, have a great day!'
-    exit
+    
+     exit
     end
+     end
      #validation-know what this statement mean
-     #def welcome
-       # puts 'Welcome to the Game of Thrones Cli!'
-      #end
+     def welcome
+      puts 'Welcome to the Game of Thrones Cli!'
+      end
     
       #def print_all
        # Got.all.each {|p| puts "#{p.id}.1} #{p.name}" }
@@ -39,4 +41,5 @@ class Cli
      # end  
     
      #'If a wrong number is pushed or the information is not available quote "Please make a different selection"!'
-    
+ 
+end 

@@ -4,7 +4,7 @@ class Got
    def initialize (houses, region, coat_of_arms)
       @houses = houses
       @region = region
-      @coat of arms = coat_of_arms 
+      @coat_of_arms = coat_of_arms 
       @@all << self 
    end  
       
