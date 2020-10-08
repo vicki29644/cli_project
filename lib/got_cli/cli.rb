@@ -2,12 +2,10 @@ class Cli
     def run
       welcome
       Api.get_got
-      main
+      print_all
     end
     
-    def main
-      print_all
-    end 
+
     
     def validation
       print_continue
@@ -29,13 +27,14 @@ class Cli
       puts 'Welcome to the Game of Thrones Cli!'
       end
     
-      #def print_all
-       # Got.all.each {|p| puts "#{p.id}.1} #{p.name}" }
-      #end
+      def print_all
+       Got.all.each.with_index(1) {|p,i| puts "#{i}. #{p.houses}"}
+      end
      
-      #def choose_selection_prompt
-    #'Please select either a one of the houses or its number for more information'#coat of arms, region
-            
+      def choose_selection_prompt
+      puts 'select either a one of the houses or its number for more information, coat of arms, or region'
+      end
+
      # def prompt_selection
       #  get.chomp
      # end  

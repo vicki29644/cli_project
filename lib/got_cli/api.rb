@@ -6,11 +6,12 @@ class Api
     res = RestClient.get(BASE_URL) 
     data = JSON.parse(res.body)
     data.each do |got|        #http://anapioficeandfire.com/api/houses/1   "House Algood"  
- houses = got["houses"]  
- region = region
- coat_of_arms = coat_of_arms   #crearing intstances and saving it to the got class 
+ houses = got["name"]  
+ region = got["region"]
+ coat_of_arms =got["coatOfArms"]                        #crearing intstances and saving it to the got class 
    
-    Got.new(houses,)
+    Got.new(houses,region, coat_of_arms)
     end
+    binding.pry
     end
   end
