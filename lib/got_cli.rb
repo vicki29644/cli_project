@@ -3,6 +3,9 @@
 require 'pry'
 require 'rest-client'
 require 'json'
+
+require 'dotenv/load'
+
 require 'bundler/setup'
 Bundler.require(:default)
 
