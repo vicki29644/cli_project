@@ -6,7 +6,7 @@ link to mit license:  "https://github.com/vicki29644/cli_project/commit/54d68d47
 
 # Cli_project
 ## GOT_CLI
-In this Got Cli_project the API class will make one call to the BASE URL (https://elephant-api.herokuapp.com/elephants/). Once the user has access to the list of houses, the user can  then request  more information from each house by typing a number.
+In this Got Cli_project the API class will make one call to the BASE URL (http://anapioficeandfire.com/api/houses/?limit=40). Once the user has access to the list of houses, the user can  then request  more information from each house by typing a number.
 ## GEMS
 These are the gems i used to build my Cli_project
 - gem 'pry'
