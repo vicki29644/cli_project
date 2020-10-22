@@ -1,11 +1,17 @@
 class Cli
     def run              #cli class will greet the user and run the cli- also is user input and output 
-    #binding.pry 
     print_welcome
       Api.get_got    
       main
-      print_all
     end
+
+    def main                            #expand functionallity, tell projet to do! print all of the house, information, for them also 
+      print_all 
+      print_selection_prompt
+      user_input
+      validation
+   end
+
 
     def print_welcome
       puts "Welcome to the Game of Thrones Cli!"
@@ -13,12 +19,7 @@ class Cli
 
     def print_all
       Got.all.each.with_index(1) do |p,i|
-        # puts "#{index} .) #{got.houses}" 
-        # puts "----------------"
-        puts "#{i}. #{p.houses}"   
-        # puts "#{i}. #{p.region}" 
-        # puts "#{i}, #{p.coat_of_arms}"
-        # puts "----------------" 
+      puts "#{i}. #{p.houses}"    
       end 
     end
       
@@ -30,33 +31,18 @@ class Cli
 
     def print_continue
       puts "would you like to continue? (y/n)"
-    end
-    
-    # def prompt_seletion
-    #     gets.chomp
-    # end  
+    end 
     
     def print_error 
       puts "Wrong selection, try again!"
     end 
     
-    def main                            #expand functionallity, tell projet to do! print all of the house, information, for them also 
-        print_all 
-        print_selection_prompt
-        user_input
-        validation
-        # print_continue
-        # prompt_selection
-    # continue?(prompt_seletion)
-    end
-
     def user_input
      index = gets.strip.to_i - 1
      amount = Got.all.size - 1
      until index.between?(0,amount)
-     print_error
+     print_error                                 # User's input
      index = gets.strip.to_i - 1 
-     prompt_seletion
      end
      got = Got.all[index]
       puts "HOUSES:" + got.houses 

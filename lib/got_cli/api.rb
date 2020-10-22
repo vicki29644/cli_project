@@ -8,9 +8,8 @@ class Api
     data.each do |got|       'http://anapioficeandfire.com/api/houses/1'   
     houses = got["name"]  
     region = got["region"]
-    coat_of_arms = got["coatOfArms"]                        #creating instances and saving it to the got class 
-
-    Got.new(houses,region,coat_of_arms)
+    coat_of_arms = got["coatOfArms"]                      
+   Got.new(houses,region,coat_of_arms)                      #creating instances and saving it to the got class 
     end
     #binding.pry
     end
