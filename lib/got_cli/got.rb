@@ -8,11 +8,19 @@ class Got
       @region = region
       @coat_of_arms = coat_of_arms 
       @@all << self
+   
    end 
    
    def self.all
-      @@all  
+      @@all.sort_by do |got|  
+   got.region
    end 
+
+
+      
+   end 
+   
+
 
 end
 

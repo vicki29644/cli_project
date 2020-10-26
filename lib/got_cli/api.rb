@@ -5,7 +5,7 @@ class Api
   def self.get_got
     res = RestClient.get(BASE_URL) 
     data = JSON.parse(res.body)
-    data.each do |got|       'http://anapioficeandfire.com/api/houses/1'   
+    data.each do |got|                        # 'http://anapioficeandfire.com/api/houses/1'   
     houses = got["name"]  
     region = got["region"]
     coat_of_arms = got["coatOfArms"]                      
